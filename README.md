@@ -1,5 +1,5 @@
 # AntiPython-AI-Club
-AI community for people who dislike Python.
+AI community for people who dislike Python. Join the [mailing list](https://antipythonai.substack.com/)
 
 ## Background
 Getting into AI as a hobbyist/professional is my dream. I understand the Math and the algorithms. However, I struggle most with Python. 
