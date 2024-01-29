@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Hello Extensions",
+  "description": "Base Level Extension",
+  "version": "1.0",
+  "icons":{
+    "16":"icon.jpg",
+    "48":"icon.jpg",
+    "128":"icon.jpg"
+  },
+  "minimum_chrome_version": "116",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background":{
+    "service_worker":"background.js"
+  },
+  "content_scripts": [
+    {
+      "js": ["content.js"],
+      "matches": [
+        "https://colab.research.google.com/drive/*",
+        "https://colab.research.google.com/*"
+      ]
+    }
+  ],
+  "permissions": ["scripting", "activeTab"],
+  "options_page": "options.html"
+}
+
