@@ -67,4 +67,4 @@ Please consider supporting our project 🙏
 
 A big thank you to all our supporters! 🙏
 
-[![Donate](https://opencollective.com/caprover/donate/button.png?color=blue)](https://opencollective.com/caprover#backer)
+[![Donate](https://opencollective.com/caprover/donate/button.png?color=blue)](https://opencollective.com/fileforma)
