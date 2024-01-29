@@ -8,7 +8,7 @@
 uint32_t leafStateTracker = 0;
 uint32_t branchStateTracker = 0; 
 uint32_t nodeStateTracker = 0;
-
+//Escape these : https://stackoverflow.com/questions/983451/where-can-i-find-a-list-of-escape-characters-required-for-my-json-ajax-return-ty/1021976#1021976
 //Uncomment the following line to enable the printf function.
 //#define ENABLE_PRINTF
 #ifdef ENABLE_PRINTF
@@ -16,6 +16,10 @@ uint32_t nodeStateTracker = 0;
 #else
     #define    debug_printf(f,...)
 #endif
+
+char *pythonString;
+size_t maxPythonStringLength = 100000;
+size_t currentPythonStringLength = 0;
 
 
 enum JAVA_STATE_MACHINE
@@ -118,8 +122,18 @@ void ProcessLeafNode(TSNode node,char *sourceCode)
 		if(previousBranch1 == FROM_KEYWORD)
 		{
 			printf(" ");
+			pythonString[currentPythonStringLength] = ' ';
+			currentPythonStringLength += 1; 
 		}
-		printf("import ");				
+		printf("import ");	
+		pythonString[currentPythonStringLength+0] = 'i';
+		pythonString[currentPythonStringLength+1] = 'm';
+		pythonString[currentPythonStringLength+2] = 'p';
+		pythonString[currentPythonStringLength+3] = 'o';
+		pythonString[currentPythonStringLength+4] = 'r';
+		pythonString[currentPythonStringLength+5] = 't';
+		pythonString[currentPythonStringLength+6] = ' ';
+		currentPythonStringLength += 7; 			
 		AddStateToTracker(IMPORT,LEAF_IDENTIFIER);
 	}
 	else if(strcmp(ts_node_type(node), "identifier") == 0)
@@ -127,7 +141,15 @@ void ProcessLeafNode(TSNode node,char *sourceCode)
 		AddStateToTracker(IDENTIFIER,LEAF_IDENTIFIER);
 		if(previousBranch == IMPORT_DECLARATION && previousLeaf == IMPORT)
 		{
-			for(int i = startByte; i < endByte; i++){printf("%c", sourceCode[i]);} printf(" ");
+			for(int i = startByte; i < endByte; i++)
+			{
+				printf("%c", sourceCode[i]);
+				pythonString[currentPythonStringLength] = sourceCode[i];
+				currentPythonStringLength += 1;
+			} 
+			printf(" ");
+			pythonString[currentPythonStringLength] = ' ';
+			currentPythonStringLength += 1;
 		}
 		else if(previousBranch == SCOPED_IDENTIFIER)
 		{
@@ -142,14 +164,31 @@ void ProcessLeafNode(TSNode node,char *sourceCode)
 			else if(endByte - startByte == 2 && sourceCode[startByte+0]=='a' && sourceCode[startByte+1]=='s')
 			{
 				AddStateToTracker(AS_KEYWORD,LEAF_IDENTIFIER);
-				printf(" "); for(int i = startByte; i < endByte; i++){printf("%c", sourceCode[i]);} printf(" ");
+				pythonString[currentPythonStringLength] = ' ';
+				currentPythonStringLength += 1;
+				printf(" "); for(int i = startByte; i < endByte; i++)
+				{
+					printf("%c", sourceCode[i]);
+					pythonString[currentPythonStringLength] = sourceCode[i];
+					currentPythonStringLength += 1;
+				
+				} printf(" ");
+				pythonString[currentPythonStringLength] = ' ';
+				currentPythonStringLength += 1;
 			}
 			else
 			{
-				for(int i = startByte; i < endByte; i++){printf("%c", sourceCode[i]);}
+				for(int i = startByte; i < endByte; i++)
+				{
+					printf("%c", sourceCode[i]);
+					pythonString[currentPythonStringLength] = sourceCode[i];
+					currentPythonStringLength += 1;
+				}
 				if(previousBranch1 == FROM_KEYWORD)
 				{
 					printf(" ");
+					pythonString[currentPythonStringLength] = ' ';
+					currentPythonStringLength += 1;
 				}
 			}
 		}
@@ -161,12 +200,20 @@ void ProcessLeafNode(TSNode node,char *sourceCode)
 			AddStateToTracker(FROM_KEYWORD,BRANCH_IDENTIFIER);
 			AddStateToTracker(SCOPED_IDENTIFIER,BRANCH_IDENTIFIER);
 			printf("from ");
+			pythonString[currentPythonStringLength+0] = 'f';
+			pythonString[currentPythonStringLength+1] = 'r';
+			pythonString[currentPythonStringLength+2] = 'o';
+			pythonString[currentPythonStringLength+3] = 'm';
+			pythonString[currentPythonStringLength+4] = ' ';
+			currentPythonStringLength += 5; 
 		}
 	}
 	else if(strcmp(ts_node_type(node), ";") == 0)
 	{	
 		AddStateToTracker(SEMICOLON,LEAF_IDENTIFIER);
 		printf("\n");	
+		pythonString[currentPythonStringLength+0] = '\n';
+		currentPythonStringLength += 1; 
 	}
 	else if(strcmp(ts_node_type(node), ".") == 0)
 	{	
@@ -175,6 +222,8 @@ void ProcessLeafNode(TSNode node,char *sourceCode)
 		{
 			AddStateToTracker(DOT,LEAF_IDENTIFIER);
 			printf(".");	
+			pythonString[currentPythonStringLength+0] = '.';
+			currentPythonStringLength += 1; 
 		}
 
 	}

@@ -1,6 +1,9 @@
 var notebookCellList;
 var antiPythonCellList = [];
 var addCodeCellButton;
+var currentPythonCode;
+var currentWritingCode;
+
 var codeCellListObserver = new MutationObserver(function(mutations) 
 {
     mutations.forEach(function(mutation)
@@ -150,8 +153,19 @@ function AddPythonToggleButton(currentCell)
         if(event.button === 0)
         {
             myCustomButton.style.color = "#b3b3b3";
-            if(myCustomButton.innerText === "Show 🐍"){myCustomButton.innerText="Hide 🐍";}
-            else{myCustomButton.innerText="Show 🐍";}
+            if(myCustomButton.innerText === "Show 🐍")
+            {
+                myCustomButton.innerText="Hide 🐍";
+            }
+            else
+            {
+                myCustomButton.innerText="Show 🐍";
+                if(currentPythonCode)
+                {
+                    currentWritingCode = currentCell.innerText;
+                    currentCell.innerText = currentPythonCode;
+                }
+            }
         }
     });
     
@@ -177,8 +191,6 @@ function AddPythonToggleButton(currentCell)
     myCustomDropdown.style.textAlign="center";
     myCustomDropdown.style.justifyContent="center";
     myCustomDropdown.innerText="Java Server";
-
-    
 
     if(cellToolbar)
     {
@@ -233,8 +245,9 @@ function AntiPythonButtonClick(){
                             //console.log(currentCellID);
                             //console.log(mutation.target.innerText);
                             
-                            chrome.runtime.sendMessage({message: mutation.target.innerText},(response) =>{
-                                console.log(response.message);
+                            chrome.runtime.sendMessage({message: mutation.target.innerText},(response) =>
+                            {
+                                //console.log(response);
                             })
                         });
                         
@@ -263,4 +276,13 @@ function FindArrayIntersection(arr1, arr2) {
     }
     return intersection;
   }
-
+  chrome.runtime.onMessage.addListener((message, sender, sendResponse)=>{
+    var codeString = JSON.parse(message);
+    if(codeString && codeString['python'])
+    {
+        //console.log(codeString['python'])
+        currentPythonCode = codeString['python'];
+    }
+    
+    return true;
+  })

@@ -1,4 +1,5 @@
 let webSocket = null;
+const pongString = "pong";
 const languageServer = "ws://localhost:8000/websocket";
 
 function keepAlive()
@@ -28,12 +29,21 @@ function connect()
     console.log('websocket open');
     keepAlive();
   };
-
+  
   webSocket.onmessage = (event) =>
   {
-    console.log(`websocket received message: ${event.data}`);
+    if(pongString.localeCompare(event.data) === 0)
+    {
+      console.log("Pong received")
+    }
+    else
+    {
+      console.log(`websocket received message: ${event.data}`);
+      chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
+        chrome.tabs.sendMessage(tabs[0].id, event.data, function(response) {});  
+    });
+    }
   };
-
   webSocket.onclose = (event) =>
   {
     console.log('websocket connection closed');
@@ -56,6 +66,10 @@ chrome.runtime.onInstalled.addListener(()=>{
     keepAlive();
 });
 
+const handlePythonMessage = async (message) => {
+  sendResponse({ user });
+};
+
 chrome.runtime.onMessage.addListener((message, sender, sendResponse)=>{
   let regex = /&(nbsp|amp|quot|lt|gt);/g;
   var messageData = JSON.stringify(message);
@@ -63,13 +77,12 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse)=>{
 
     if(!webSocket)
     {
-        connect();
-        keepAlive();
+      connect(sendResponse);
+      keepAlive();
     }
     if(webSocket)
     {
-        webSocket.send(data);
+      webSocket.send(data);
+      return true;
     }
-
-    sendResponse({message : "response from background JSSg"})
 })

@@ -52,9 +52,22 @@ static void ServerHandler(struct mg_connection *connection, int event, void *eve
 			else if(cJSON_IsString(parsedMessage) && (parsedMessage->valuestring != NULL))
 			{ 
 				//printf("Code :  %s\n", parsedMessage->valuestring); 
-				printf("\n");
+				//printf("\n");
+				cJSON *json = cJSON_CreateObject(); 
+				pythonString = calloc(maxPythonStringLength, sizeof(char));
+				currentPythonStringLength = 0;
+				assert(pythonString != NULL);
+				
 				ParseCode(strlen(parsedMessage->valuestring),parsedMessage->valuestring);
-				mg_ws_send(connection, wm->data.ptr, wm->data.len, WEBSOCKET_OP_TEXT);
+				assert(currentPythonStringLength < maxPythonStringLength-1);
+				//printf("Here\n%s", pythonString);
+				
+				cJSON_AddStringToObject(json, "python", pythonString); 
+				char *jsonString = cJSON_Print(json); 
+				mg_ws_send(connection, jsonString, strlen(jsonString), WEBSOCKET_OP_TEXT);
+				cJSON_Delete(json);
+				free(jsonString);
+				free(pythonString);
 			}
 
 			cJSON_Delete(json);
@@ -66,15 +79,18 @@ static void ServerHandler(struct mg_connection *connection, int event, void *eve
 
 int main()
 {
+
 	javaParser= ts_parser_new();
 	ts_parser_set_language(javaParser, tree_sitter_java());
 	
 	struct mg_mgr eventManager;mg_mgr_init(&eventManager);
 	//mg_log_set(MG_LL_DEBUG);
+	printf("Language server running on port 8000\n");
 	mg_http_listen(&eventManager, "http://0.0.0.0:8000", ServerHandler, NULL);for (;;) mg_mgr_poll(&eventManager, 1000); 
 	
 	mg_mgr_free(&eventManager);
 	ts_parser_delete(javaParser);
+
   	return 0;
 }
 /*
