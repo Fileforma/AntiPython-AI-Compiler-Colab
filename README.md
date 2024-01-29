@@ -16,7 +16,7 @@ No python knowledge required!
 
 Join the [mailing list](https://antipythonai.substack.com/)
 
-Contribute [1$ towards your favorite language](https://antipythonai.substack.com/)
+Contribute [1$ towards your favorite language](https://opencollective.com/fileforma)
 
 
 <a href="https://youtu.be/VPHEXPfsvyQ" target="_blank" title="YouTube">
@@ -52,7 +52,8 @@ This is a work in progress.
 25th Jan - Built Chrome extension interface.
 
 29th Jan - Java imports working. 
-Please consider supporting our project 🙏
+
+[Sponsor your favorite language here🙏](https://opencollective.com/fileforma)
 
 <div align="center">
 <h1>✨ Getting started ✨</h1>
