@@ -54,7 +54,7 @@ Join the [mailing list](https://antipythonai.substack.com/)
 <p> <b>Node JS and GCC<b> needed to compile Javascript and C</p>
 </div>
   
-[Watch the video tutorial](https://www.udemy.com/course/vscode-extensions)
+[Watch the video tutorial](https://youtu.be/mmfHCCA0IHE)
 
 1. Clone the repo to your personal computer
    ```
@@ -95,6 +95,13 @@ Join the [mailing list](https://antipythonai.substack.com/)
     npm start
     ```
 14. Go to the Google Colab page and have fun with the Java Demo!
+    *Only imports working at the moment. This is a demo showing the Chrome interface*
+    Try these Java examples
+    ```
+    import math;
+    import com.fileforma.tensorflow
+    import com.fileforma.numpy as numpy
+    ```
 
 ## Our other products
 [Making VS Code Extensions for Engineering Managers and CTOs](https://www.udemy.com/course/vscode-extensions)
