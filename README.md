@@ -1,7 +1,6 @@
 <div align="center">
 <h1>✨ AntiPython Colab Compiler for AI</h1>
   
-[<img src="https://img.shields.io/twitter/follow/murage_kibicho" alt="Follow for updates"/>](https://twitter.com/murage_kibicho)
 <a href="https://github.com/Fileforma/AntiPython-AI-Club/" target="_blank" title="GitHub stars">
 <img src="https://img.shields.io/github/stars/Fileforma" alt="GitHub stars"/>
 </a>
@@ -107,10 +106,12 @@ Join the [mailing list](https://antipythonai.substack.com/)
 ## Financial Supporters
 
 🙏 Get Lifetime Support [for Early Backers](https://opencollective.com/fileforma)
+
 🏢 Corporate Sponsor [support](https://opencollective.com/fileforma)
+
 Join the [mailing list](https://antipythonai.substack.com/)
 
 
-[![Donate](https://opencollective.com/caprover/donate/button.png?color=blue)](https://opencollective.com/fileforma)
+[<img src="https://img.shields.io/twitter/follow/murage_kibicho" alt="Follow for updates"/>](https://twitter.com/murage_kibicho)
 
 
