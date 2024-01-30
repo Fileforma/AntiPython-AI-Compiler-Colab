@@ -1,9 +1,6 @@
 <div align="center">
 <h1>✨ AntiPython Colab Compiler for AI</h1>
-<a href="https://hub.docker.com/r/caprover/caprover/" target="_blank" title="Video Tutorial">
-<img src="https://img.shields.io/badge/Video-Tutorial-blue" alt="Video Tutorial"/>
-</a>
-
+  
 [<img src="https://img.shields.io/twitter/follow/murage_kibicho" alt="Follow for updates"/>](https://twitter.com/murage_kibicho)
 <a href="https://github.com/Fileforma/AntiPython-AI-Club/" target="_blank" title="GitHub stars">
 <img src="https://img.shields.io/github/stars/Fileforma" alt="GitHub stars"/>
