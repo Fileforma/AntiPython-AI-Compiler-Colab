@@ -19,9 +19,7 @@ Join the [mailing list](https://antipythonai.substack.com/)
 Contribute [1$ towards your favorite language](https://opencollective.com/fileforma)
 
 
-<a href="https://youtu.be/VPHEXPfsvyQ" target="_blank" title="YouTube">
-<img src="https://raw.githubusercontent.com/caprover/caprover-website/master/graphics/screenshots-video-small.png" alt="YouTube"/>
-</a>
+<img src="https://res.cloudinary.com/dcrelr5e7/image/upload/v1706581854/Virtual_Assistant_Promotion_of_Services_Facebook_Cover_Photo_kxqr4d.png" alt="Banner"/>
 </div>
 
 ## What's this?
