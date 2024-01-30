@@ -82,7 +82,7 @@ Join the [mailing list](https://antipythonai.substack.com/)
 8. Visit the Google Colab webpage `https://colab.research.google.com/` and create a new notebook.
 
 9. Go back to the folder `AntiPython-AI-Compiler-Colab`. Open a *new* terminal window.
-10. Open the folder `Compiler-Backend` and open the folder 
+10. Open the folder `Compiler-Backend` and open the folder `Translator`
    ```
    cd Compiler-Backend && cd Translator
    ```
