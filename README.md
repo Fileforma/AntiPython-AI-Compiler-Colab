@@ -51,9 +51,13 @@ Join the [mailing list](https://antipythonai.substack.com/)
 
 <div align="center">
 <h1>✨ Getting started ✨</h1>
-<h3>This is a Java demo showing Java to Python imports</h3>
-<p> <b>Node JS and GCC<b> needed</p>
+<h3>Java demo showing Java to Python imports available</h3>
+<p> <b>Node JS and GCC<b> needed to compile Javascript and C</p>
 </div>
+  
+[Watch the video tutorial](https://www.udemy.com/course/vscode-extensions)
+
+  
 
 
 
