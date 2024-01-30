@@ -99,8 +99,8 @@ Join the [mailing list](https://antipythonai.substack.com/)
     Try these Java examples
     ```
     import math;
-    import com.fileforma.tensorflow
-    import com.fileforma.numpy as numpy
+    import com.fileforma.tensorflow;
+    import com.fileforma.numpy as numpy;
     ```
 
 ## Our other products
