@@ -45,13 +45,14 @@ AntiPython Colab is built for:
 -   Hobbyists who realize they spend more time setting up Python environments than actual coding.
 
 ## Development Status!
-This is a work in progress. 
+This is a work in progress. Send direct feeback here - murage@fileforma.com
 
 25th Jan - Built Chrome extension interface.
 
 29th Jan - Java imports working. 
 
 [Sponsor your favorite language here🙏](https://opencollective.com/fileforma)
+Join the [mailing list](https://antipythonai.substack.com/)
 
 <div align="center">
 <h1>✨ Getting started ✨</h1>
@@ -67,3 +68,7 @@ This is a work in progress.
 A big thank you to all our supporters! 🙏
 
 [![Donate](https://opencollective.com/caprover/donate/button.png?color=blue)](https://opencollective.com/fileforma)
+
+## Our other products
+[Making VS Code Extensions for Engineering Managers and CTOs](https://www.udemy.com/course/vscode-extensions)
+[FFmpeg Data Structures in the C language](https://www.udemy.com/course/part-1-video-coding-with-ffmpeg-and-c-in-replit-online-ide)
