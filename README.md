@@ -78,7 +78,7 @@ Join the [mailing list](https://antipythonai.substack.com/)
    npm run build
    ```
 6. Open Google Chrome and visit `chrome://extensions` in a new tab. Enable Developer Mode.
-7. Click the `Load unpacked button` and select the folder **dist** created in `Step 5`.Translator
+7. Click the `Load unpacked button` and select the folder **dist** created in `Step 5`.
 8. Visit the Google Colab webpage `https://colab.research.google.com/` and create a new notebook.
 
 9. Go back to the folder `AntiPython-AI-Compiler-Colab`. Open a *new* terminal window.
