@@ -3,16 +3,13 @@
 <a href="https://hub.docker.com/r/caprover/caprover/" target="_blank" title="Video Tutorial">
 <img src="https://img.shields.io/badge/Video-Tutorial-blue" alt="Video Tutorial"/>
 </a>
-<a href="https://twitter.com/murage_kibicho" target="_blank" title="Follow for updates">
-<img src="https://img.shields.io/twitter/follow/murage_kibicho" alt="Follow for updates"/>
-</a>
+
+[<img src="https://img.shields.io/twitter/follow/murage_kibicho" alt="Follow for updates"/>](https://twitter.com/murage_kibicho)
 <a href="https://github.com/Fileforma/AntiPython-AI-Club/" target="_blank" title="GitHub stars">
 <img src="https://img.shields.io/github/stars/Fileforma" alt="GitHub stars"/>
 </a>
 
-Google Colab GPU access in <u>your favorite programming language <u>
-
-No python knowledge required!
+Google Colab GPU access in <u>your favorite programming language<u>
 
 Join the [mailing list](https://antipythonai.substack.com/)
 
