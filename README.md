@@ -5,6 +5,9 @@
 <img src = "https://api.visitorbadge.io/api/daily?path=https%3A%2F%2Fgithub.com%2FFileforma%2FAntiPython-AI-Compiler-Colab&label=Online%20Visitors&countColor=%23263759&style=flat-square"
  alt="Visitor Count" />
 <img src="https://img.shields.io/github/stars/Fileforma" alt="GitHub stars"/>
+
+[![Twitter](https://img.shields.io/twitter/follow/murage_kibicho?style=social)](https://twitter.com/intent/follow?screen_name=murage_kibicho)
+
 </a>
 
 **Google Colab GPU access** in `your favorite programming language`
