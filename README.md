@@ -13,7 +13,10 @@ Contribute [1$ towards your favorite language](https://opencollective.com/filefo
 
 
 <img src="https://res.cloudinary.com/dcrelr5e7/image/upload/v1706581854/Virtual_Assistant_Promotion_of_Services_Facebook_Cover_Photo_kxqr4d.png" alt="Banner"/>
+<img src = "https://api.visitorbadge.io/api/daily?path=https%3A%2F%2Fgithub.com%2FFileforma%2FAntiPython-AI-Compiler-Colab&label=Online%20Visitors&countColor=%23263759&style=flat-square"
+ alt="Visitor Count" />
 </div>
+
 
 ## What's this?
 AntiPython Colab is a source to source compiler that let's you **build AI in Java, Rust, JavaScript, Flutter, C#, Go, Ocaml(and etc...)** utilizing free Google Colab GPUs!
