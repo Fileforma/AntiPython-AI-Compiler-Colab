@@ -6,7 +6,7 @@
  alt="Visitor Count" />
 <img src="https://img.shields.io/github/stars/Fileforma" alt="GitHub stars"/>
 
-[![Twitter](https://img.shields.io/twitter/follow/murage_kibicho?style=social)](https://twitter.com/intent/follow?screen_name=murage_kibicho)
+Click Coupon: [Making VS Code Extensions for Engineering Managers and CTOs](https://www.udemy.com/course/vscode-extensions)
 
 </a>
 
