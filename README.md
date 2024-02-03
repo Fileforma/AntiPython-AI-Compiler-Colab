@@ -14,8 +14,6 @@ Free Coupon: [Making VS Code Extensions for Engineering Managers and CTOs](https
 
 Receive [project updates](https://antipythonai.substack.com/)
 
-Contribute [1$ towards your favorite language](https://opencollective.com/fileforma)
-
 
 <img src="https://res.cloudinary.com/dcrelr5e7/image/upload/v1706581854/Virtual_Assistant_Promotion_of_Services_Facebook_Cover_Photo_kxqr4d.png" alt="Banner"/>
 
