@@ -6,7 +6,7 @@
  alt="Visitor Count" />
 <img src="https://img.shields.io/github/stars/Fileforma" alt="GitHub stars"/>
 
-Free Coupon: [Making VS Code Extensions for Engineering Managers and CTOs](https://www.udemy.com/course/vscode-extensions)
+Free Coupon: [Making VS Code Extensions for Engineering Managers and CTOs](https://www.udemy.com/course/vscode-extensions/?couponCode=ANTIPYTHON-COLAB)
 
 </a>
 
